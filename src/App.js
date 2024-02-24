@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+
+import styles from  './App.module.css';
+let category;
+const User =(props)=>{
+  return (
+    <div>
+      <h1 className={styles.Name}>{props.name}</h1>
+      <h1>{props.age}</h1>
+      <h1>{props.email}</h1>
+      {props.age<=18 ? <h1>Underage</h1> : <h1>Legal age</h1>}
+      
+    </div>
+  );
+};
 
 function App() {
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={styles.App}>
+       <User name="Sudibya" age={18} email="sonujena085@gmail.com" />
+        
+        <h2 style={{color:"red"}}>Show the color</h2>
     </div>
   );
 }
-
 export default App;

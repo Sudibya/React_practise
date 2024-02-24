@@ -2,6 +2,11 @@
   text-align: center;
 }
 
+
+.Name {
+  color: blueviolet;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
